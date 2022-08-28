@@ -4,7 +4,7 @@ An open source video game library manager and launcher with support for 3rd part
 
 Screenshots are available at the [Homepage](http://playnite.link/)
 
-*If you find Playnite useful please consider supporting the lead developer [Josef Nemec](https://github.com/JosefNemec) on [Patreon](https://www.patreon.com/playnite).*
+*If you find Playnite useful, please consider supporting the lead developer [Josef Nemec](https://github.com/JosefNemec) on [Patreon](https://www.patreon.com/playnite).*
 
 Features
 ---------
@@ -34,15 +34,15 @@ The list of known issues and solutions can be found [on the wiki](https://github
 
 Privacy Statement
 ---------
-Playnite doesn't store any user information and you don't need to provide any information to import installed games. Account connection process is usually done via official login web forms and only the web session cookies or tokens are stored, the same way when you login to those services via the web browser.
+Playnite doesn't store any user information, and none needs to be provided when importing installed games. The account connection process is usually done via official login web forms, and only the web session cookies or tokens are stored, the same way when you login to those services via the web browser.
 
 All information about your library is stored locally on your PC.
 
 Questions, issues etc.
 ---------
-If you find a bug please file an [issue](https://github.com/JosefNemec/Playnite/issues) and if relevant (crashes, broken features) please attach a diagnostics package, which can be created from inside the "About Playnite..." submenu.
+If you find a bug, please file an [issue](https://github.com/JosefNemec/Playnite/issues), and if it concerns crashes or broken features, please attach a diagnostics package - which can be created from inside the "About Playnite..." submenu.
 
-Biggest community around Playnite currently gathers on our [Discord server](https://discord.gg/hSFvmN6) and [Forums](https://playnite.link/forum). You can also follow [@AppPlaynite](https://twitter.com/AppPlaynite) for general updates.
+The biggest community around Playnite currently gathers on our [Discord server](https://discord.gg/hSFvmN6) and [Forums](https://playnite.link/forum). You can also follow [@AppPlaynite](https://twitter.com/AppPlaynite) for general updates.
 
 Contributions
 ---------
@@ -53,7 +53,7 @@ See the [How to: Translations](https://github.com/JosefNemec/Playnite/wiki/How-t
 See the [How to: Themes](https://github.com/JosefNemec/Playnite/wiki/How-to%3A-Themes) wiki page.
 
 ### Code Contributions
-Please ask in the related issue first before starting implementing something to make sure that nobody else is already working on it. If an issue doesn't exist for your feature/bug fix, create one first.
+Please ask in the related issue first before starting implementing something, to make sure that nobody else is already working on it. If no issue exists for your feature/bug fix, create one first.
 
 Regarding code styling, there are only a few major rules:
 
@@ -61,7 +61,7 @@ Regarding code styling, there are only a few major rules:
 - all methods (private and public) should use PascalCase
 - use spaces instead of tabs with 4 spaces width
 - add empty line between code block end `}` and additional expression
-- always encapsulate the code body after *if, for, foreach, while* etc. with curly braces:
+- always encapsulate the code body using curly braces, after *if, for, foreach, while* etc.:
 
 ```csharp
 if (true)
@@ -83,7 +83,7 @@ DoSomethingElse();
 Branches
 ---------
 * `master` - default branch representing state of currently released build.
-* `devel` - development branch containing latest changes. All pull requests should be made against `devel` branch.
+* `devel` - development branch containing latest changes. All pull requests should be made against the `devel` branch.
 * `devel*` - development branches for specific features/versions.
 
 Roadmap
