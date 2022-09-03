@@ -46,7 +46,7 @@ Option #2 requires installation of [Visual Studio IDE](https://visualstudio.micr
 **Using Blend editor is the recommended option.**
 
 > [!WARNING] 
-> Theme installation and update always replaces the entire theme directory completely; meaning any files that are not part of the installation package will be lost during the installation process! If your theme includes some custom functionality requiring users replacing/adding files to the theme's directory, make sure they're aware those changes will be lost after an update!
+> Theme installation and update always replaces the entire theme directory completely; meaning any files that are not part of the installation package will be lost during the installation process! If your theme includes some custom functionality requiring users replacing/adding files to the theme's directory, make sure they're aware that those changes will be lost after an update!
 
 Integrating with plugins
 ---------------------
