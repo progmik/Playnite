@@ -3,76 +3,76 @@
 Installing Blend
 ---------------------
 
-Blend is part of [Visual Studio IDE](https://visualstudio.microsoft.com/), which is available for free with Community edition. Visual Studio comes with lot of components you might not be interested in, for theme development you only need `.NET Desktop development` workload.
+Blend is part of the [Visual Studio IDE](https://visualstudio.microsoft.com/), available for free with the Community Edition. Visual Studio comes with lots of components you might not be interested in; for theme development all you need is the `.NET Desktop development` workload.
 
 > [!WARNING] 
-> The latest Visual Studio **2022** is currently not supported (live previews will not work)! Use [2019 or 2017 version](https://visualstudio.microsoft.com/vs/older-downloads/) instead.
+> The latest Visual Studio **2022** is currently not supported (live previews will not work)! Use the [2019 or 2017 version](https://visualstudio.microsoft.com/vs/older-downloads/) instead.
 
-Creating new theme
+Creating a new theme
 ---------------------
-[Open command prompt](https://www.windows-commandline.com/how-to-open-command-prompt/) and [navigate](https://www.windows-commandline.com/command-prompt-change-directory/) to Playnite's installation folder. To create new theme you need to run `Toolbox.exe` utility with these arguments:
+[Open the command prompt](https://www.windows-commandline.com/how-to-open-command-prompt/) and [navigate](https://www.windows-commandline.com/command-prompt-change-directory/) to Playnite's installation folder. To create a new theme, you need to run the `Toolbox.exe` utility using these arguments:
 
 ```cmd
 Toolbox.exe new desktoptheme|fullscreentheme <ThemeName>
 ```
 
-For example to create new desktop theme with "Super Clear Modern" name:
+For example, to create a new desktop theme with "Super Clear Modern as the name:
 
 ```cmd
 Toolbox.exe new desktoptheme "Super Clear Modern"
 ```
 
-This will create new theme folder with all files needed for theme to be edited in Blend. If theme creation is successful then Explorer window will open with your new theme folder. DO NOT move theme's directory, designer in Blend will not work properly unless the theme is opened from the location where Toolbox created it!
+This will create a new folder containing all files needed for the theme to be edited in Blend. If the theme creation is successful, the Explorer window will open using your new theme folder. DO NOT move the theme's folder - designer in Blend will not work properly unless the theme is opened from the initial location Toolbox used to create it!
 
 > [!NOTE] 
-> There might be issues with above examples if you installed Playnite into folder where write access is not enabled by default unless you have elevated privileges (folders like `c:\Program Files`). In that case you will need to run command prompt and Blend with admin privileges. However better approach would be to use different install location.
+> If Playnite was installed into a folder with no write access enabled by default, some issues might occur using the aforementioned examples - some folders need you to have elevated privileges (folders like `c:\Program Files`). In those cases you will need to run the command prompt and Blend using admin privileges. However, a better approach would be to use a different install location.
 
-Editing theme
+Editing a theme
 ---------------------
 
-To edit theme in Blend open `Theme.sln` file from theme's directory.
+To edit a theme in Blend, open the `Theme.sln` file from the theme's directory.
 
 > [!NOTE] 
-> Just opening `.sln` file will usually open Visual Studio instead of Blend. While you can use Visual Studio to edit the theme as well, it lacks many features that make editing easier, like live preview for templates and styles. To open `.sln` files in Blend, right-click on the file, select `Open with` and choose `Blend for Visual Studio` option.
+> Just opening `.sln` file will usually open Visual Studio instead of Blend. While you can use Visual Studio to edit the theme as well, it lacks many features making editing easier; like live preview for templates and styles. To open `.sln` files in Blend, right-click on the file, select `Open with` and select the `Blend for Visual Studio` option.
 
 > [!WARNING] 
-> Due to way Playnite resolves paths to theme files (like images), it is necessary to open theme sln file via the file itself. If you open Blend first and then use it to open the theme sln, some parts of live preview might not work properly. This will be fixed in future Playnite updates.
+> Due to the way Playnite resolves theme files' paths (like images), it is necessary to open a theme sln file via the file itself. If you open Blend first and use that to open the theme sln, some parts of the live preview might not work properly. This will be fixed in future Playnite updates.
 
-As a first thing after creating new theme, open `theme.yaml` file and change manifest fields if you need to (you will probably need to change Author at least). For more information about available manifest fields see [manifest file page](manifestFile.md).
+As a first thing after creating a new theme, open the `theme.yaml` file and change the manifest fields (if you need to) - you will probably need to change Author at least. For more information about the available manifest fields, see the [manifest file page](manifestFile.md).
 
 Files
 ---------------------
 
-Themes consist of several `.xaml` files. Each view, panel or specific control usually has their own xaml file. Commonly used resources like colors and brushes that affect all controls are generally defined in `Constants.xaml`.
+Themes consists of several `.xaml` files. Each view, panel or specific control usually has their own xaml file. Commonly used resources like colors and brushes affecting all controls are generally defined in `Constants.xaml`.
 
 Live preview
 ---------------------
 
-To open live preview (design view):
+To open the live preview (design view):
 
-#### 1) Open appropriate style (xaml) file
+#### 1) Open the appropriate style (xaml) file
 
-Not all files can be previewed in design view, some only contain constants like colors, brushes etc. `Constants.xaml` is best example of this. If you want to see preview for these resources, open resources window (View -> Resources window) and expand appropriate file.
+Not all files can be previewed in the design view; some only contains constants like colors, brushes etc. - `Constants.xaml` is the best example of this. If you want to see a preview of these resources, open the resources window (View -> Resources window) and expand the appropriate file.
 
-#### 2) Open design view panel
+#### 2) Open the design view panel
 
-Toggle design view using `Design` tab button. It is highly recommended to keep XAML text view open as well since it's faster for making changes. To have both views open you can split the editor using buttons on bottom right part of the editor (offering both horizontal and vertical split.
+Toggle design view using the `Design` tab button. It is highly recommended to keep the XAML text view open as well, since it's faster for making changes. To have both views open at once, you can split the editor using the buttons on the bottom right part of the editor (offering both horizontal and vertical split.
 
 ![image](images/designSwitch.png)
 
 #### 3) Select style to preview
 
-Since single xaml file can contain multiple styles for multiple views/controls, you need to select style you want to preview first. To do so select line in a text editor starting with `<Style TargetType=...`.
+Since a single xaml file might contain multiple styles for multiple views/controls, you need to select the prefered style to preview first. To do so, select the line in a text editor starting with `<Style TargetType=...`.
 
-#### 4) Activate preview
+#### 4) Activate the preview
 
-On design panel select `Style` dropdown, then `Edit Template` and lastly `Edit Current`. This will load preview for style you selected in previous step.
+On the design panel, click on the `Style` dropdown and select `Edit Template`, and then `Edit Current`. This will load the preview for the style selected in the previous step.
 
 ![image](images/templateEdit.png)
 
 #### 5) Enjoy
 
-Now a preview for the specific view/control should be visible. If the view doesn't seem to display all resources properly (for example missing or incorrect colors and brushes are used), see troubleshooting section.
+Now a preview for the specific view/control should appear. If not all resources are being displayed properly in the view (for example missing or incorrect colors and brushes are used), see the troubleshooting section.
 
 ![image](images/designExample.png)
 
@@ -81,11 +81,11 @@ Troubleshooting
 
 ### Fonts, colors and other resources are not applied
 
-Opening style's design view for the first sometimes doesn't properly load referenced resources (like fonts, colors etc). This is a Blend issue and can be fixed easily by editing some part of the style, which will force the design view to reload. Switching to a different file tab and back also resolves this sometimes.
+When opening the style's design view for the first time, sometimes the referenced resources may load incorrectly (like fonts, colors etc). This is a Blend issue and can be easily fixed by editing any part of the style, which will force the design view to reload. Switching to a different file tab and back also sometimes resolves this.
 
-### Updating ThemeFile markup doesn't update in a preview
+### Updating the ThemeFile markup doesn't update in a preview
 
-Specifically declare `RelativePath` property if this happens:
+Specifically declare the `RelativePath` property if this happens:
 ```xml 
 <Image Source="{ThemeFile RelativePath='Images/applogo.png'}" />
 ```
@@ -94,19 +94,19 @@ Specifically declare `RelativePath` property if this happens:
 <Image Source="{ThemeFile 'Images/applogo.png'}" />
 ```
 
-### Design view just doesn't work
+### Design view is not working
 
-This happens if theme is not opened from correct directory. As mentioned above, theme's .sln file must be opened from the directory that Toolbox created it in. Moving to a different directory will cause issues!
+This happens if the theme is opened from an incorrect directory. As mentioned above, the theme's .sln file must be opened from the directory where Toolbox created it. Moving it to a different directory will cause issues!
 
 Testing changes
 ---------------------
  
-To test theme in Playnite itself, just start Playnite and change theme selection in the application settings. No additional steps should be needed for Playnite to load the theme.
+To test a theme in Playnite, just start the application and change the prefered theme in the application settings. No additional steps should be needed for Playnite to load the theme.
 
 Packaging theme for distribution
 ---------------------
 
-See [Distribution and Updates](distributionAndUpdates.md) page for more details.
+See the [Distribution and Updates](distributionAndUpdates.md) page for more details.
 
 > [!WARNING] 
-> Please pay special attention to section about updating themes to make sure your custom theme always works with the latest Playnite version.
+> Please pay special attention to the section about updating themes, to make sure your custom theme always works with the latest Playnite version.
